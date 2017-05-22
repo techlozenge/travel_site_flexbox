@@ -2,7 +2,7 @@
 Choose a font from google fonts to use for the text in the hero
 and use @import to include in this style sheet. The font in the image is "Bangers"
 */
-
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 
 /*
 - make the masthead a flexbox container
@@ -12,7 +12,30 @@ and use @import to include in this style sheet. The font in the image is "Banger
 - using the position property, make sure the navigation stays fixed to the top when scrolling
 - when scrolling make sure there is no gap between the masthead and top of the page
 */
+#masthead{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100px;
+  width: 100%;
+  background-color: #000000;
+}
+
+#nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-link{
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 /*
 - make the hero div a flexbox container
@@ -24,6 +47,21 @@ and use @import to include in this style sheet. The font in the image is "Banger
 - adjust the top margin of the hero to account for the fixed masthead
 */
 
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Bangers, helvetica;
+  text-shadow: 2px 2px black;
+
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("../../assets/images/travel_hero.jpg");
+}
 
 /*
 - Make the cards div a flexbox container
@@ -31,7 +69,12 @@ and use @import to include in this style sheet. The font in the image is "Banger
 - reverse the order of the cards using flexbox (should become chili aruna italy spain)
 - make sure when the page shrinks the cards wrap and stack on eachother
 */
-
+#cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
 
 /*
 - Make each individual card a flexbox container
@@ -41,27 +84,88 @@ and use @import to include in this style sheet. The font in the image is "Banger
   (there is bottom padding applied in common.css to keep it off the very bottom so it looks right)
 */
 
+#spain {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../../assets/images/spain_flag.svg");
+}
+
+#italy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../../assets/images/italy_flag.svg");
+}
+
+#aruba {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../../assets/images/aruba_flag.svg");
+}
+
+#chile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../../assets/images/chile_flag.svg");
+}
 
 /*
 - Make the travel table div a flexbox container
 - using flexbox make sure the content is stacked and not in a row
 - make sure the content is centered in each card using flexbox
 */
+#travel-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  color: black;
+  background-color: white;
+}
 
 /*
 - Make the footer div a flexbox container
 - make sure the copyright displays on the left and the social links display on the right using flexbox
 - make sure the content is vertically centered in the here div using flexbox
 */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 50px;
+}
 
 /*
 MEDIUM CHALLENGE:
-Using media queries, hide the national bird column in the table when the screen is at a 
+Using media queries, hide the national bird column in the table when the screen is at a
 max width of 800px. Hide both the national bird and population column when the
 screen is at a max width of 600px
 
 HINT:
-leverage the classes .bird and .population 
+leverage the classes .bird and .population
 */
+
+@media screen and (max-width: 800px) {
+    .bird {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bird  {
+      display: none;
+    }
+    .population {
+      display: none;
+    }
+}

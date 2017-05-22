@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+}
+
+.application {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  width: 100%;
+  border 1px solid #808080;
+}
+
+.input input {
+  border: 0;
+  width: 100%;
+}
+
+.input label {
+  display: block;
+  color: grey;
+}
+
+/* ******* */
+/* group 1 */
+/* ******* */
+
+#name {
+  order: 1;
+  height: 55px;
+  border: 2px solid #808080;
+  flex: 45%;
+}
+
+#company {
+  order: 2;
+  height: 55px;
+  border: 2px solid #808080;
+  flex: 45%;
+}
+
+/* ******* */
+/* group 2 */
+/* ******* */
+
+#phone {
+  order: 3;
+  height: 50px;
+  border: 2px solid #808080;
+  flex: 30%;
+}
+
+#email {
+  order: 4;
+  height: 50px;
+  border: 2px solid #808080;
+  flex: 30%;
+}
+
+#availability {
+  order: 5;
+  height: 50px;
+  border: 2px solid #808080;
+  flex: 30%;
+}
+
+/* ******* */
+/* group 3 */
+/* ******* */
+
+#skills {
+  order: 6;
+  height: 50px;
+  border: 2px solid #808080;
+  flex: 20%;
+}
+
+#yearsofexperience {
+  order: 7;
+  height: 50px;
+  border: 2px solid #808080;
+  flex: 20%;
+}
+
+#favoritecolor {
+  order: 8;
+   height: 50px;
+   border: 2px solid #808080;
+   flex: 20%;
+}
+
+#language {
+   order: 9;
+   height: 50px;
+   border: 2px solid #808080;
+   flex: 20%;
+}
